@@ -1,0 +1,11 @@
+# OS-generated files
+.DS_Store
+
+# Locally-generated files
+*.log
+tmp
+node_modules
+
+# IDE files
+.code
+.history
