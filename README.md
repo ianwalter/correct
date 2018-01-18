@@ -1,4 +1,5 @@
 # Correct
+> Pragmatic validation for Node.js
 
 ## Example Usage
 
@@ -11,7 +12,8 @@ const {
   isString
   isStrongPassword,
   isPhone,
-  isOptional
+  isOptional,
+  ValidationError
 } = require('correct')
 
 // Custom validator example:
@@ -21,6 +23,7 @@ const mustContainSoftware = occupation => {
   }
 }
 
+// Create the validator.
 const registrationValidator = new Validator({
   email: { isEmail },
   name: { isString },
@@ -29,7 +32,19 @@ const registrationValidator = new Validator({
   phone: { isPhone, isOptional, name: 'telephone number' }
 })
 
-const validation = registrationValidator.validate(req.body)
+try {
+  // Validate the input.
+  const validation = await registrationValidator.validate(req.body)
+
+  // Continue to do something here.
+} catch (err) {
+  if (err instanceof ValidationError) {
+    // If the error is a ValidationError, respond with the invalid results.
+    res.status(422).json(validation) // Or just validation.errors
+  } else {
+    res.status(500)
+  }
+}
 ```
 
 ### Input (req.body):
@@ -76,12 +91,14 @@ isArray   | Validates whether input is an Array.                               |
 Name             | Descriptionn                                                |
 -----------------|-------------------------------------------------------------|
 isTimestamp      | Validates whether input is a valid ISO8601 timestamp.       |
-                 | Valid example: '1998'                                       |
+                 | Valid example: '2018-01-01T00:00:00.000Z'                   |
 isEmail          | Validates whether input is a valid email address.           |
+                 | Valid example: sharonjones@hotmail.com                      |
+                 | Invalid example: ting#fastmail.com                          |
 isPhone          | Validates whether input is a valid phone number.            |
 isStrongPassword | Validates whether input is a strong (has a score of 3 or 4) |
                  | password using [zxcvbn](https://github.com/dropbox/zxcvbn)  |
-                 | Valid example: ''                                           |
+                 | Valid example: 'Dmbu5bc5yeCRwsRD'                           |
                  | Invalid example: 'qwerty'                                   |
 isUrl            | Validates whether input is a valid URL.                     |
 isZip            | Validates wehther input is a valid zip code.                |
