@@ -34,15 +34,15 @@ const registrationValidator = new Validator({
 
 try {
   // Validate the input.
-  const validation = await registrationValidator.validate(req.body)
+  await registrationValidator.validate(req.body)
 
   // Continue to do something here.
-} catch (err) {
-  if (err instanceof ValidationError) {
+} catch (error) {
+  if (error instanceof ValidationError) {
     // If the error is a ValidationError, respond with the invalid results.
-    res.status(422).json(validation) // Or just validation.errors
+    res.status(422).json(error.feedback)
   } else {
-    res.status(500)
+    res.status(500).end()
   }
 }
 ```
@@ -55,7 +55,7 @@ try {
   "name": "",
   "password": "qwerty",
   "occupation": "CEO",
-  "phone: "777",
+  "phone": "777"
 }
 ```
 
@@ -64,7 +64,7 @@ try {
 ```js
 {
   email: ['A valid email address is required.'],
-  name: ['Namew is required.'],
+  name: ['Name is required.'],
   password: ['Your password must be stronger.'],
   occupation: ['Occupation must contain software.'],
   phone: ['A valid telephone number is required.']
