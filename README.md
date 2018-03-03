@@ -7,7 +7,7 @@
 
 ```js
 const {
-  Validator,
+  SchemaValidator,
   isEmail,
   isString
   isStrongPassword,
@@ -24,7 +24,7 @@ const mustContainSoftware = occupation => {
 }
 
 // Create the validator.
-const registrationValidator = new Validator({
+const registrationValidator = new SchemaValidator({
   email: { isEmail },
   name: { isString },
   password: { isStrongPassword, message: 'Your password must be stronger.' },
@@ -34,7 +34,7 @@ const registrationValidator = new Validator({
 
 try {
   // Validate the input.
-  await registrationValidator.validate(req.body)
+  await registrationValidator.validate(req.body).orThrow()
 
   // Continue to do something here.
 } catch (error) {
