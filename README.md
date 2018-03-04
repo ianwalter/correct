@@ -13,15 +13,15 @@ const {
   isStrongPassword,
   isPhone,
   isOptional,
+  Validation,
   ValidationError
 } = require('correct')
 
 // Custom validator example:
-const mustContainSoftware = occupation => {
-  if (!occupation.toLowerCase().includes('software')) {
-    return 'Occupation must contain software.'
-  }
-}
+const msg = 'Occupation must contain software.'
+const mustContainSoftware = occupation => (
+  new Validation(occupation.toLowerCase().includes('software') || msg)
+)
 
 // Create the validator.
 const registrationValidator = new SchemaValidator({
