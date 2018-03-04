@@ -18,15 +18,15 @@ describe('validators', () => {
 
     describe('.orThrow()', () => {
       test('returns true when valid', () => {
-        expect(isString(name).except()).toBe(true)
+        expect(isString(name).throw()).toBe(true)
       })
 
       test('throws a ValidationError when invalid', () => {
-        expect(() => isString(year).except()).toThrowError(ValidationError)
+        expect(() => isString(year).throw()).toThrowError(ValidationError)
       })
 
       test('throws a custom message ValidationError when invalid', () => {
-        expect(() => isString(year).except('Wrong!')).toThrowError('Wrong!')
+        expect(() => isString(year).throw('Wrong!')).toThrowError('Wrong!')
       })
     })
   })

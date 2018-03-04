@@ -45,8 +45,8 @@ describe('Validator', () => {
         expect(validation.valid()).toBe(true)
       })
 
-      test('.except() returns true', () => {
-        expect(validation.except()).toBe(true)
+      test('.throw() returns true', () => {
+        expect(validation.throw()).toBe(true)
       })
     })
 
@@ -60,8 +60,8 @@ describe('Validator', () => {
         expect(validation.valid()).toBe(false)
       })
 
-      test('.except() throws ValidationErrror', () => {
-        expect(() => validation.except()).toThrowError(ValidationError)
+      test('.throw() throws ValidationErrror', () => {
+        expect(() => validation.throw()).toThrowError(ValidationError)
       })
     })
   })
