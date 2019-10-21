@@ -9,7 +9,7 @@
 const {
   SchemaValidator,
   isEmail,
-  isString
+  isString,
   isStrongPassword,
   isPhone,
   isOptional,
