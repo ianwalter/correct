@@ -1,65 +1,32 @@
 {
   "name": "correct",
-  "version": "1.0.0",
-  "description": "> Pragmatic validation for Node.js",
+  "version": "0.0.0",
+  "description": "Pragmatic validation for Node.js",
   "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "tests"
+  "scripts": {
+    "lint": "eslint .",
+    "test": "bff"
   },
   "dependencies": {
     "@ianwalter/base-error": "^1.0.0",
+    "date-fns": "^2.5.1",
     "decamelize": "^2.0.0",
     "is-phone": "^2.0.0",
     "isemail": "^3.1.1",
-    "jest": "^22.4.2",
-    "luxon": "^0.5.3",
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-preset-env": "^1.6.1",
-    "eslint": "^4.15.0",
-    "eslint-config-standard": "^11.0.0-beta.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jest": "^21.7.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.recursive.run:ianwalter/correct.git"
+    "@ianwalter/bff": "^7.0.0",
+    "@ianwalter/eslint-config": "^3.0.0",
+    "@ianwalter/release": "^3.0.5",
+    "@ianwalter/renovate-config": "^1.2.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": true
-          }
-        }
-      ]
-    ]
-  },
+  "license": "SEE LICENSE IN LICENSE",
   "eslintConfig": {
     "extends": [
-      "standard"
-    ],
-    "plugins": [
-      "jest"
-    ],
-    "env": {
-      "jest/globals": true
-    },
-    "parser": "babel-eslint"
+      "@ianwalter"
+    ]
   }
 }
