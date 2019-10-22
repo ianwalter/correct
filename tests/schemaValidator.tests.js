@@ -1,5 +1,5 @@
 const { test } = require('@ianwalter/bff')
-const { 
+const {
   isString,
   isEmail,
   isPhone,

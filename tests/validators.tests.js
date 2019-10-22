@@ -1,7 +1,7 @@
 const { test } = require('@ianwalter/bff')
-const { 
-  ValidationError, 
-  isString, 
+const {
+  ValidationError,
+  isString,
   isEmail,
   isPhone,
   isDate,
