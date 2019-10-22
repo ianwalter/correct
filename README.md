@@ -40,7 +40,7 @@ try {
 } catch (error) {
   if (error instanceof ValidationError) {
     // If the error is a ValidationError, respond with the invalid results.
-    res.status(422).json(error.feedback)
+    res.status(400).json(error.feedback)
   } else {
     res.status(500).end()
   }
@@ -79,12 +79,6 @@ try {
 Name      | Descriptionn                                                       |
 ----------|--------------------------------------------------------------------|
 isString  | Validates whether input is a String.                               |
-isBoolean | Validates whether input is a Boolean.                              |
-isInteger | Validates whether input is a Integer.                              |
-isFloat   | Validates whether input is a floating point number.                |
-isNumber  | Validates whether input is or can be converted to a number.        |
-isObject  | Validates whether input is an Object.                              |
-isArray   | Validates whether input is an Array.                               |
 
 ### Advanced Types
 

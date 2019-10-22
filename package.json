@@ -1,5 +1,5 @@
 {
-  "name": "correct",
+  "name": "@ianwalter/correct",
   "version": "0.0.0",
   "description": "Pragmatic validation for Node.js",
   "main": "index.js",
@@ -7,6 +7,14 @@
     "lint": "eslint .",
     "test": "bff"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/correct.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ianwalter/correct/issues"
+  },
+  "homepage": "https://github.com/ianwalter/correct#readme",
   "dependencies": {
     "@ianwalter/base-error": "^1.0.0",
     "@ianwalter/print": "^3.6.0",
@@ -22,8 +30,11 @@
     "@ianwalter/release": "^3.0.5",
     "@ianwalter/renovate-config": "^1.2.0"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "schema",
+    "validation"
+  ],
+  "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
   "license": "SEE LICENSE IN LICENSE",
   "eslintConfig": {
     "extends": [
