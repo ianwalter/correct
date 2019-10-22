@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`invalid registration 1`] = `
+Object {
+  "email": Array [
+    "A valid email is required.",
+  ],
+  "name": Array [
+    "A valid name is required.",
+  ],
+  "occupation": Array [
+    "A valid occupation is required.",
+  ],
+  "password": Array [
+    "Your password must be stronger.",
+  ],
+  "phone": Array [
+    "A valid telephone number is required.",
+  ],
+}
+`;

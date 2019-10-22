@@ -4,7 +4,8 @@ const {
   isString, 
   isEmail,
   isPhone,
-  isDate
+  isDate,
+  isStrongPassword
 } = require('..')
 
 test('isString', ({ expect }) => {
@@ -32,4 +33,9 @@ test('isDate', ({ expect }) => {
   expect(isDate('2019-10-21T03:13:20.796Z').valid()).toBe(true)
   expect(isDate('209').valid()).toBe(false)
   expect(isDate(new Date()).valid()).toBe(true)
+})
+
+test('isStrongPassword', ({ expect }) => {
+  expect(isStrongPassword('fj2wfnfw93ivznjiojweQWPMNV').valid()).toBe(true)
+  expect(isStrongPassword('qwerty').valid()).toBe(false)
 })
