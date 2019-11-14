@@ -21,21 +21,21 @@ const registrationValidator = new SchemaValidator({
   occupation: { containsSoftware },
   phone: { isPhone, isOptional, name: 'telephone number' }
 })
+const validInput = {
+  email: 'yo@fastmail.com',
+  name: 'Georgy Zhukov',
+  password: '23-01=dwko;qwe2',
+  occupation: 'Software General',
+  phone: '555-555-5555'
+}
 
 test('valid registration', async ({ expect }) => {
-  const input = {
-    email: 'yo@fastmail.com',
-    name: 'Georgy Zhukov',
-    password: '23-01=dwko;qwe2',
-    occupation: 'Software General',
-    phone: '555-555-5555'
-  }
-  const validation = await registrationValidator.validate(input)
+  const validation = await registrationValidator.validate(validInput)
   expect(validation.valid()).toBe(true)
   expect(validation.throw()).toBe(true)
 })
 
-test('invalid registration', async ({ expect, print }) => {
+test('invalid registration', async ({ expect }) => {
   const input = {
     email: 'hahaha',
     name: '',
@@ -51,4 +51,14 @@ test('invalid registration', async ({ expect, print }) => {
     expect(err instanceof ValidationError).toBe(true)
     expect(err.feedback).toMatchSnapshot()
   }
+})
+
+test('validaion data', async ({ expect }) => {
+  const input = {
+    ...validInput,
+    artist: 'Peach Pit',
+    song: 'Feelin Low'
+  }
+  const validation = await registrationValidator.validate(input)
+  expect(validation.data).toEqual(validInput)
 })
