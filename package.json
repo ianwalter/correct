@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/correct",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Pragmatic validation for Node.js",
   "main": "index.js",
   "scripts": {
