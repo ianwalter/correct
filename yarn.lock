@@ -27,10 +27,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@ianwalter/base-error@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@ianwalter/base-error/-/base-error-1.1.0.tgz#cf27811359e68bac9a1c60d4dadb88ec348d1ab7"
-  integrity sha512-angV+Cr9HMB2ibwqdGO5wvysj7lGW7td/B2ZCjksofE1OUtSeaKyoouIh9rLY9fj/GB1nR0M9qKt3aYYx/9MSQ==
+"@ianwalter/base-error@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@ianwalter/base-error/-/base-error-6.1.0.tgz#a25f8a57e04877f6823251c5f1e05c7c060a0130"
+  integrity sha512-a1oe3gdY7aVJotysd2hbkARZdIXd80b1xL+kcJGQ/5VzEv7bMhQ+vlamv8DLz828uz/dxMCVb4++n75RyVUs2Q==
 
 "@ianwalter/bff@^7.0.0":
   version "7.0.0"
