@@ -14,5 +14,8 @@ Object {
   "password": Array [
     "Your password must be stronger.",
   ],
+  "phone": Array [
+    "A valid telephone number is required.",
+  ],
 }
 `;
