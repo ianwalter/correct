@@ -17,7 +17,7 @@
   "homepage": "https://github.com/ianwalter/correct#readme",
   "dependencies": {
     "@ianwalter/base-error": "^6.1.0",
-    "@ianwalter/print": "^3.9.0",
+    "@ianwalter/print": "^4.0.2",
     "date-fns": "^2.9.0",
     "decamelize": "^2.0.0",
     "is-phone": "^2.0.0",
