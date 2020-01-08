@@ -62,3 +62,9 @@ test('validaion data', async ({ expect }) => {
   const validation = await registrationValidator.validate(input)
   expect(validation.data).toEqual(validInput)
 })
+
+test('without optional data', async ({ expect }) => {
+  const { phone, ...required } = validInput
+  const validation = await registrationValidator.validate(required)
+  expect(validation.valid()).toBe(true)
+})

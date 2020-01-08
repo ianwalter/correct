@@ -7,5 +7,6 @@ module.exports = {
   Validation,
   ValidationError,
   SchemaValidator,
-  ...validators
+  ...validators,
+  isOptional: true
 }
