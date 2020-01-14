@@ -10,6 +10,8 @@ const {
 test('isString', ({ expect }) => {
   expect(isString('Parker')).toBe(true)
   expect(isString(2018)).toBe(false)
+  expect(isString({})).toBe(false)
+  expect(isString([])).toBe(false)
 })
 
 test('isEmail', ({ expect }) => {
