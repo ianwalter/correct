@@ -5,15 +5,15 @@ const {
   isPhone,
   isStrongPassword,
   isOptional,
-  SchemaValidator,
-  Validation,
-  ValidationError
+  SchemaValidator
 } = require('..')
 
-const msg = 'Occupation must contain software.'
-const containsSoftware = occupation => (
-  new Validation(occupation.toLowerCase().includes('software') || msg)
-)
+const containsSoftware = {
+  validate: occupation => ({
+    isValid: occupation.toLowerCase().includes('software'),
+    message: 'Occupation must contain software.'
+  })
+}
 const registrationValidator = new SchemaValidator({
   email: { isEmail },
   name: { isString },
@@ -31,8 +31,7 @@ const validInput = {
 
 test('valid registration', async ({ expect }) => {
   const validation = await registrationValidator.validate(validInput)
-  expect(validation.valid()).toBe(true)
-  expect(validation.throw()).toBe(true)
+  expect(validation.isValid).toBe(true)
 })
 
 test('invalid registration', async ({ expect }) => {
@@ -44,13 +43,14 @@ test('invalid registration', async ({ expect }) => {
     phone: '777'
   }
   const validation = await registrationValidator.validate(input)
-  expect(validation.valid()).toBe(false)
-  try {
-    validation.throw()
-  } catch (err) {
-    expect(err instanceof ValidationError).toBe(true)
-    expect(err.feedback).toMatchSnapshot()
-  }
+  expect(validation.isValid).toBe(false)
+  expect(validation).toMatchSnapshot({
+    validations: {
+      password: {
+        result: expect.any(Object)
+      }
+    }
+  })
 })
 
 test('validaion data', async ({ expect }) => {
@@ -66,5 +66,5 @@ test('validaion data', async ({ expect }) => {
 test('without optional data', async ({ expect }) => {
   const { phone, ...required } = validInput
   const validation = await registrationValidator.validate(required)
-  expect(validation.valid()).toBe(true)
+  expect(validation.isValid).toBe(true)
 })
