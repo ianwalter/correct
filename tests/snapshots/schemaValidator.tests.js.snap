@@ -2,20 +2,44 @@
 
 exports[`invalid registration 1`] = `
 Object {
-  "email": Array [
-    "A valid email is required.",
-  ],
-  "name": Array [
-    "A valid name is required.",
-  ],
-  "occupation": Array [
-    "A valid occupation is required.",
-  ],
-  "password": Array [
-    "Your password must be stronger.",
-  ],
-  "phone": Array [
-    "A valid telephone number is required.",
-  ],
+  "data": Object {
+    "email": "hahaha",
+    "name": "",
+    "occupation": "CEO",
+    "password": "qwerty",
+    "phone": "777",
+  },
+  "feedback": Object {
+    "email": Array [
+      "A valid email is required.",
+    ],
+    "name": Array [
+      "A valid name is required.",
+    ],
+    "password": Array [
+      "This is a top-10 common password",
+      "Add another word or two. Uncommon words are better.",
+    ],
+  },
+  "isValid": false,
+  "validations": Object {
+    "email": Object {
+      "isValid": false,
+    },
+    "name": Object {
+      "isValid": false,
+    },
+    "occupation": Object {
+      "isValid": "Occupation must contain software.",
+    },
+    "password": Object {
+      "feedback": Array [
+        "Add another word or two. Uncommon words are better.",
+      ],
+      "isValid": false,
+      "message": "This is a top-10 common password",
+      "result": Any<Object>,
+    },
+  },
 }
 `;
