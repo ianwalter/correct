@@ -16,6 +16,9 @@ Object {
     "name": Array [
       "A valid name is required.",
     ],
+    "occupation": Array [
+      "Occupation must contain software.",
+    ],
     "password": Array [
       "This is a top-10 common password",
       "Add another word or two. Uncommon words are better.",
@@ -30,7 +33,8 @@ Object {
       "isValid": false,
     },
     "occupation": Object {
-      "isValid": "Occupation must contain software.",
+      "isValid": false,
+      "message": "Occupation must contain software.",
     },
     "password": Object {
       "feedback": Array [

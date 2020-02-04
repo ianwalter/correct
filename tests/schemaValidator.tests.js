@@ -5,14 +5,13 @@ const {
   isPhone,
   isStrongPassword,
   isOptional,
-  SchemaValidator,
-  ValidationError
+  SchemaValidator
 } = require('..')
 
-const msg = 'Occupation must contain software.'
 const containsSoftware = {
   validate: occupation => ({
-    isValid: occupation.toLowerCase().includes('software') || msg
+    isValid: occupation.toLowerCase().includes('software'),
+    message: 'Occupation must contain software.'
   })
 }
 const registrationValidator = new SchemaValidator({
