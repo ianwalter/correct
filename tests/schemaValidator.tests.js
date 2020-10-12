@@ -5,6 +5,8 @@ const {
   isPhone,
   isStrongPassword,
   isOptional,
+  lowercase,
+  trim,
   SchemaValidator
 } = require('..')
 
@@ -15,14 +17,15 @@ const containsSoftware = {
   })
 }
 const registrationValidator = new SchemaValidator({
-  email: { isEmail },
+  email: { isEmail, lowercase, trim },
   name: { isString },
   password: { isStrongPassword, message: 'Your password must be stronger.' },
   occupation: { containsSoftware },
   phone: { isPhone, isOptional, name: 'telephone number' }
 })
+const email = 'yo@fastmail.com'
 const validInput = {
-  email: 'yo@fastmail.com',
+  email: '  yo@FASTmail.com',
   name: 'Georgy Zhukov',
   password: '23-01=dwko;qwe2',
   occupation: 'Software General',
@@ -60,7 +63,7 @@ test('validaion data', async ({ expect }) => {
     song: 'Feelin Low'
   }
   const validation = await registrationValidator.validate(input)
-  expect(validation.data).toEqual(validInput)
+  expect(validation.data).toEqual({ ...validInput, email })
 })
 
 test('without optional data', async ({ expect }) => {

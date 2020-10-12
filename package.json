@@ -24,6 +24,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.11.0",
     "@ianwalter/bff": "^9.10.0",
     "@ianwalter/eslint-config": "^5.4.0",
     "@ianwalter/release": "^5.0.2",
@@ -33,7 +34,14 @@
     "schema",
     "validation"
   ],
-  "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "author": {
+    "name": "Ian Walter",
+    "url": "https://ianwalter.dev"
+  },
   "license": "SEE LICENSE IN LICENSE",
   "eslintConfig": {
     "extends": [

@@ -2,6 +2,7 @@
 .DS_Store
 
 # Locally-generated files
+.pnpm-store
 *.log
 tmp
 node_modules
