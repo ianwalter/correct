@@ -2,19 +2,20 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     container:
-      image: node:12.10-slim
+      image: ianwalter/pnpm:v1.1.0
+    timeout-minutes: 3
     steps:
       - name: Checkout
-        uses: actions/checkout@v1.2.0
+        uses: actions/checkout@v2
       - name: Install
-        run: yarn
+        run: pnpm i
       - name: Lint
-        run: yarn lint
+        run: pnpm lint
       - name: Test
-        run: yarn test
+        run: pnpm t

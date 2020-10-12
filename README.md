@@ -108,3 +108,14 @@ name       | Allows you to customize the name of the field as it appears in    |
            | key.                                                              |
 message    | Allows you to set the error message.                              |
 isOptional | Allows you to mark the field as optional/not required.            |
+
+
+## License
+
+Hippocratic License - See [LICENSE][licenseUrl]
+
+&nbsp;
+
+Created by [Ian Walter](https://ianwalter.dev)
+
+[licenseUrl]: https://github.com/ianwalter/correct/blob/main/LICENSE
