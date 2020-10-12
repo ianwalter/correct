@@ -38,6 +38,9 @@
     "lib",
     "index.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "Ian Walter",
     "url": "https://ianwalter.dev"
