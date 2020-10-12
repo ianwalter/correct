@@ -1,10 +1,14 @@
 const { test } = require('@ianwalter/bff')
 const { trim, lowercase } = require('..')
 
-test('trim', ({ expect }) => {
-  expect(trim(' Cam ')).toBe('Cam')
+test('trim', t => {
+  t.expect(trim(' Cam ')).toBe('Cam')
 })
 
-test('lowercase', ({ expect }) => {
-  expect(lowercase('DeForEST')).toBe('deforest')
+test('lowercase', t => {
+  t.expect(lowercase('DeForEST')).toBe('deforest')
+})
+
+test('lowercase undefined', t => {
+  t.expect(lowercase()).toBe(undefined)
 })
