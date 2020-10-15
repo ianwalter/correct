@@ -7,7 +7,7 @@ dependencies:
   zxcvbn: 4.4.2
 devDependencies:
   '@changesets/cli': 2.11.0
-  '@ianwalter/bff': 9.10.0
+  '@ianwalter/bff': 9.11.0
   '@ianwalter/eslint-config': 5.4.0
   '@ianwalter/release': 5.0.2
   '@ianwalter/renovate-config': 1.4.0
@@ -251,7 +251,7 @@ packages:
   /@ianwalter/base-error/6.1.0:
     resolution:
       integrity: sha512-a1oe3gdY7aVJotysd2hbkARZdIXd80b1xL+kcJGQ/5VzEv7bMhQ+vlamv8DLz828uz/dxMCVb4++n75RyVUs2Q==
-  /@ianwalter/bff/9.10.0:
+  /@ianwalter/bff/9.11.0:
     dependencies:
       '@ianwalter/cli': 4.1.0
       '@ianwalter/clone': 6.0.1
@@ -273,7 +273,7 @@ packages:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-8D0oYIgpCJK6tLsEqPcRvuwma7+3NrLmVWvvhFcRXGX/SEe6U7P05Zt6NRtRhgEyY3ZPK4pXYPjs4uQ8wRDMGA==
+      integrity: sha512-qTQeFtEdJskIoBi6C5uJ+LNPl4e6H8YUkS1ByN4IU3fi5IuCGX0Iu6oIM4pYgqXJ8Z1sTzMhT5eDeMXwMJ45EA==
   /@ianwalter/chromafi/1.0.1:
     dependencies:
       ansi-mark: 1.0.4
@@ -4907,7 +4907,7 @@ packages:
 specifiers:
   '@changesets/cli': ^2.11.0
   '@ianwalter/base-error': ^6.1.0
-  '@ianwalter/bff': ^9.10.0
+  '@ianwalter/bff': ^9.11.0
   '@ianwalter/eslint-config': ^5.4.0
   '@ianwalter/release': ^5.0.2
   '@ianwalter/renovate-config': ^1.4.0
