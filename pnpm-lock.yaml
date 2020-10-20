@@ -10,7 +10,7 @@ devDependencies:
   '@ianwalter/bff': 9.12.1
   '@ianwalter/eslint-config': 5.4.0
   '@ianwalter/release': 5.0.2
-  '@ianwalter/renovate-config': 1.4.1
+  '@ianwalter/renovate-config': 1.4.2
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.10.4:
@@ -558,10 +558,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-KummxGkI57AiSRdU1frjRZSzoCKFB+RyI1XlKiVvPd38XRr6lk0IfO/VQNtu6a7H/aooAGhRfb4Sm3soOaIUBQ==
-  /@ianwalter/renovate-config/1.4.1:
+  /@ianwalter/renovate-config/1.4.2:
     dev: true
     resolution:
-      integrity: sha512-i0see4GuHnUZDfcgzskNu8iYBvMNGXJYR96Q5zPVVqrkCkeVuGA46NHIwggw8VTvYwwEJhZAFoWsH7t6sAZL/A==
+      integrity: sha512-zsqqCE28FwCvBbXmDQgCwnGa5R1HEiNaMZD4QUwdVuycMT1xtv1TDAj4YiP878M4jgiU83iY1BdUXtjkpxu/Tw==
   /@ianwalter/sleep/0.0.1:
     dev: true
     resolution:
@@ -4947,7 +4947,7 @@ specifiers:
   '@ianwalter/bff': ^9.12.1
   '@ianwalter/eslint-config': ^5.4.0
   '@ianwalter/release': ^5.0.2
-  '@ianwalter/renovate-config': ^1.4.1
+  '@ianwalter/renovate-config': ^1.4.2
   date-fns: ^2.16.1
   decamelize: ^4.0.0
   is-phone: ^2.0.0
