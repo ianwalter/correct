@@ -1,7 +1,7 @@
 dependencies:
   '@ianwalter/base-error': 6.1.0
   date-fns: 2.16.1
-  decamelize: 4.0.0
+  decamelize: 5.0.0
   is-phone: 2.0.0
   isemail: 3.2.0
   zxcvbn: 4.4.2
@@ -1588,10 +1588,17 @@ packages:
     resolution:
       integrity: sha512-4TgkVUsmmu7oCSyGBm5FvfMoACuoh9EOidm7V5/J2X2djAwwt57qb3F2KMP2ITqODTCSwb+YRV+0Zqrv18k/hw==
   /decamelize/4.0.0:
+    dev: true
     engines:
       node: '>=10'
     resolution:
       integrity: sha512-9iE1PgSik9HeIIw2JO94IidnE3eBoQrFJ3w7sFuzSX4DpmZ3v5sZpUiV5Swcf6mQEF+Y0ru8Neo+p+nyh2J+hQ==
+  /decamelize/5.0.0:
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-U75DcT5hrio3KNtvdULAWnLiAPbFUC4191ldxMmj4FA/mRuBnmDwU0boNfPyFRhnan+Jm+haLeSn3P0afcBn4w==
   /decode-uri-component/0.2.0:
     dev: true
     engines:
@@ -5351,7 +5358,7 @@ specifiers:
   '@ianwalter/release': ^5.0.2
   '@ianwalter/renovate-config': ^1.4.3
   date-fns: ^2.16.1
-  decamelize: ^4.0.0
+  decamelize: ^5.0.0
   is-phone: ^2.0.0
   isemail: ^3.2.0
   zxcvbn: ^4.4.2
