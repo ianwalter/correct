@@ -6,7 +6,7 @@ dependencies:
   isemail: 3.2.0
   zxcvbn: 4.4.2
 devDependencies:
-  '@changesets/cli': 2.14.0
+  '@changesets/cli': 2.14.1
   '@ianwalter/bff': 9.13.0
   '@ianwalter/eslint-config': 6.2.0
   '@ianwalter/release': 5.0.2
@@ -223,7 +223,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-dMqe2L5Pn4UGTW89kOuuCuZD3pQFZj1Sxv92ZW4S98sXGsxcb2PdW+PeHbQ7tawkCYCOvzhXxAlN4OdF2DlDKQ==
-  /@changesets/cli/2.14.0:
+  /@changesets/cli/2.14.1:
     dependencies:
       '@babel/runtime': 7.11.2
       '@changesets/apply-release-plan': 4.2.0
@@ -258,7 +258,7 @@ packages:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-rbQMRDXl1cXOglnjUvYyrFLlYBbS0YZdfxZfW3ZbGLzLoS4n50+B9fLSE9oW20hQuL3zAnyLyacb9cwNhF2lig==
+      integrity: sha512-ydU2ZUP/s7nHQmz8TrliT+kE2dJUpZYKh8MBHrkV6suchCBhT4DmoP4VDF9M4215r18iPbMpE1TjskzXGXB8eQ==
   /@changesets/config/1.5.0:
     dependencies:
       '@changesets/errors': 0.1.4
@@ -5344,7 +5344,7 @@ packages:
     resolution:
       integrity: sha1-KOwXzwl0PtyrBW3dixsGJizHPDA=
 specifiers:
-  '@changesets/cli': ^2.14.0
+  '@changesets/cli': ^2.14.1
   '@ianwalter/base-error': ^6.1.0
   '@ianwalter/bff': ^9.13.0
   '@ianwalter/eslint-config': ^6.2.0
